@@ -10,31 +10,23 @@ Specify a series of python commands in vertical string arrays (or character arra
 _%%Implement the Matlab connection with anaconda_
 
 conda_root='C:\Users\Admin\anaconda3\';
-
 conda_package='XXXXXXX';
-
 tcpport=50028;
-
 echo_mat='C:/Users/Admin/Documents/Matlab/echo_mat.py';
-
 m2p=mat2py_connection(tcpport,conda_root,conda_package,echo_mat);
 
 
 _%%Specify commands_
-
 command_string_array=["command 1";"command 2";"command 3"];
 
 
 _%%Append carriage returns to each command (and convert to string if you give a character array)_
-
 command_string_array=commandify(command_string_array);
 
 
 _%%Execute a series of commands in the Python package within the conda environment_
-
 out=m2p.py_command(command_string_array);
 
 
 _%%Close TCP/IP connection_
-
 m2p.terminate_connect
