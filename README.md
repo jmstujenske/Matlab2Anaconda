@@ -7,7 +7,7 @@ The mat2py_connection talks to python through TCP/IP, which is implemented throu
 
 Specify a series of python commands in vertical string arrays (or character arrays) and then these can be run in the anaconda environment like so:
 
-%%Implement the Matlab connection with anaconda
+_%%Implement the Matlab connection with anaconda_
 conda_root='C:\Users\Admin\anaconda3\';
 conda_package='XXXXXXX';
 tcpport=50028;
