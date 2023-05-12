@@ -17,6 +17,7 @@ m2p=mat2py_connection(tcpport,conda_root,conda_package,echo_mat);
 
 
 _%%Specify commands_
+
 command_string_array=["command 1";"command 2";"command 3"];
 
 
