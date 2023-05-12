@@ -9,10 +9,10 @@ Specify a series of python commands in vertical string arrays (or character arra
 
 ```
 %%Implement the Matlab connection with anaconda
-conda_root='C:\Users\Admin\anaconda3\';
-conda_package='XXXXXXX';
-tcpport=50028;
-echo_mat='C:/Users/Admin/Documents/Matlab/echo_mat.py';
+conda_root='C:\Users\Admin\anaconda3\'; %path to conda
+conda_package='XXXXXXX'; %name of the anaconda env
+tcpport=50028; %arbitrary empty port
+echo_mat='C:/Users/Admin/Documents/Matlab/echo_mat.py'; %where is the echo_mat file
 m2p=mat2py_connection(tcpport,conda_root,conda_package,echo_mat);
 
 %%Specify commands
