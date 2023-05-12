@@ -7,27 +7,23 @@ The mat2py_connection talks to python through TCP/IP, which is implemented throu
 
 Specify a series of python commands in vertical string arrays (or character arrays) and then these can be run in the anaconda environment like so:
 
-_%%Implement the Matlab connection with anaconda_
+```
+%%Implement the Matlab connection with anaconda
+conda_root='C:\Users\Admin\anaconda3\';
+conda_package='XXXXXXX';
+tcpport=50028;
+echo_mat='C:/Users/Admin/Documents/Matlab/echo_mat.py';
+m2p=mat2py_connection(tcpport,conda_root,conda_package,echo_mat);
 
-conda_root='C:\Users\Admin\anaconda3\'; 
-conda_package='XXXXXXX'; 
-tcpport=50028; 
-echo_mat='C:/Users/Admin/Documents/Matlab/echo_mat.py'; 
-m2p=mat2py_connection(tcpport,conda_root,conda_package,echo_mat); 
-
-
-_%%Specify commands_
-
+%%Specify commands
 command_string_array=["command 1";"command 2";"command 3"];
 
-
-_%%Append carriage returns to each command (and convert to string if you give a character array)_
+%%Append carriage returns to each command (and convert to string if you give a character array)
 command_string_array=commandify(command_string_array);
 
-
-_%%Execute a series of commands in the Python package within the conda environment_
+%%Execute a series of commands in the Python package within the conda environment
 out=m2p.py_command(command_string_array);
 
-
-_%%Close TCP/IP connection_
+%%Close TCP/IP connection
 m2p.terminate_connect
+```
