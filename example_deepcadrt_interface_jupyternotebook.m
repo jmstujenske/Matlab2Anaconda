@@ -67,9 +67,10 @@ for com_rep=1:length(coms)
     out=m2p.py_command(coms{com_rep});
     if out==0
 %         break;
-        keyboard;
+        disp(['Error reached in command ',num2str(com_rep),' for animal ',num2str(n)]);
+        disp('Skipping to next animal.');
+        break;
     end
-    com_rep
 end
 folders=dir(result_path);
 folders=folders(3:end);
